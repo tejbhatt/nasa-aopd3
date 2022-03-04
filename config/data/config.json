@@ -1,0 +1,14 @@
+{
+    "HTTP": {
+        "PORT": 8001
+    },
+    "MONGO": {
+        "URL": "mongodb://localhost:27017",
+        "DATABASE": "apodnasa"
+    },
+    "APOD": {
+        "METHOD": "GET",
+        "URL": "https://api.nasa.gov/planetary/apod",
+        "api_key": ""
+    }
+}
