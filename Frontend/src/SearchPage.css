@@ -1,0 +1,61 @@
+.search-banner {
+	margin-top: 5px;
+}
+
+.search-page-logo {
+	width: 375px;
+	margin: 10px;
+}
+
+p {
+	margin: 0 5px 5px 5px;
+}
+
+.search-input {
+	width: 70px;
+	height: 30px;
+	margin: 5px;
+	text-align: center;
+}
+
+.search-input::-webkit-inner-spin-button,
+.search-input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+.search-button {
+	font-family: 'Titillium Web', Arial, sans-serif;
+	color: black;
+	background-color: white;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	width: 120px;
+	padding: 5px;
+	margin: 10px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.search-button:hover {
+		background-color: rgb(249, 48, 48);
+		color: white;
+		transition: 0.25s;
+	}
+}
+
+.search-button:active {
+	background-color: white;
+	color: black;
+	transition: 0.3s;
+}
+
+.not-valid {
+	font-size: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+	.search-page-logo {
+		width: 275px;
+	}
+}

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: black;
+	font-family: 'Titillium Web', Helvetica, sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.header {
+	display: grid;
+	background-color: white;
+	color: black;
+	height: 100px;
+	grid-template-columns: 25% 45% 20%;
+	grid-template-rows: 3fr 1fr;
+}
+
+.home-link {
+	text-align: right;
+}
+
+.nasa-logo-1 {
+	position: relative;
+	top: 9px;
+	width: 100px;
+}
+
+.nasa-NASA {
+	position: relative;
+	top: 13px;
+	width: 240px;
+}
+
+.nav-links {
+	position: relative;
+	right: 14px;
+	top: 10px;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: black;
+}
+
+.mini-banner {
+	position: relative;
+	text-align: left;
+	right: 4px;
+	bottom: 9px;
+	font-size: 13px;
+	grid-column: 2 / 4;
+}
+
+.daily-info {
+	
+	text-align: center;
+	margin: 0 auto;
+}
+
+.top-banner {
+	margin-top: 5px;
+}
+
+.daily-image {
+	width: 100%;
+	max-width: 600px;
+}
+
+.daily-banner {
+	line-height: 37px;
+	margin: 5px 5px 0px 5px;
+}
+
+.copyright {
+	margin-top: 7px;
+}
+
+.daily-video {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.explanation {
+	max-width: 700px;
+	margin: 0 auto;
+	margin-bottom: 75px;
+}
+
+.front-page-button {
+	font-family: 'Titillium Web', Arial, sans-serif;
+	color: black;
+	background-color: white;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	width: 120px;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 10px 5px 20px 5px;
+}
+
+.front-page-button:hover {
+	background-color: rgb(51, 48, 249);
+	color: white;
+	transition: 0.25s;
+}
+
+.nav-links:hover {
+	background-color: rgb(249, 48, 48);
+	color: white;
+	transition: 0.25s;
+}
+
+.front-page-button:active {
+	background-color: white;
+	color: black;
+	transition: 0.3s;
+}
+
+.nav-links:active {
+	background-color: rgb(109, 200, 233);
+	color: black;
+	transition: 0.3s;
+}
+
+.date {
+	margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+	.header {
+		grid-template-columns: 1fr 2fr 1fr;
+	}
+
+	.nasa-NASA {
+		top: 20px;
+		width: 210px;
+	}
+
+	.nav-links {
+		right: 10px;
+		top: 6px;
+		padding: 0;
+		display: block;
+		color: black;
+	}
+
+	.mini-banner {
+		bottom: 8px;
+	}
+
+	.daily-image {
+		width: 375px;
+	}
+
+	.daily-video {
+		max-width: 375px;
+		margin: 0 auto;
+	}
+
+	.explanation {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.nav-links {
+		position: relative;
+		text-align: center;
+		left: 15px;
+		font-size: 12px;
+		height: 20px;
+		width: 45px;
+	}
+}
