@@ -58,8 +58,8 @@ class SearchPage extends Component {
 				
 			let searchDate = `${this.state.year}-${this.state.month}-${this.state.day}`;
 
-		    //let url = `https://localhost:8001/getApod?api_key=${process.env.REACT_APP_NASA_APOD_KEY}&date=${searchDate}`;
-			const url = `https://api.nasa.gov/planetary/apod?api_key=AbEfZEUdDDW66kBuIhvq1degp98GKenzRDqHhVfw&date=${searchDate}`;
+		    let url = `https://localhost:8001/getApod?api_key=${process.env.REACT_APP_NASA_APOD_KEY}&date=${searchDate}`;
+			//const url = `https://api.nasa.gov/planetary/apod?api_key=AbEfZEUdDDW66kBuIhvq1degp98GKenzRDqHhVfw&date=${searchDate}`;
 
 
 			fetch(url)

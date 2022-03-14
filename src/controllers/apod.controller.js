@@ -1,5 +1,10 @@
 const { create, getApod } = require('../packages/database/mongo/operations/aopdDetails');
 const { getApodDetails } = require('../packages/services/getApodDetails.service');
+const download = require('image-downloader');
+const fs = require("fs");
+
+
+
 
 const getApodController = async (req, res) => {
     try{   
@@ -18,7 +23,22 @@ const getApodController = async (req, res) => {
         if(!apodExistInDb) {
             //get apod details from nasa api
             const result = await getApodDetails(date);
-
+           console.log(result);
+           const imageurl = result.url;
+           console.log(imageurl);   
+           options = {
+             url:result.url,
+             dest: 'D:\\nasa-aopd\\src\\image'      // will be saved to /path/to/dest/photo.jpg
+           }
+           
+           download.image(options)
+             .then(({ filename }) => {
+               console.log('Saved to', filename)  // saved to /path/to/dest/photo.jpg
+             })
+             .catch((err) => console.error(err))
+           
+            
+          
             //storing apod details in DB
             apodExistInDb = await create(result)
         }
@@ -28,6 +48,7 @@ const getApodController = async (req, res) => {
     catch(error){
         return res.status(error.statusCode || 400).json({message: error.message})
     }
+    
 }
 
 module.exports = {

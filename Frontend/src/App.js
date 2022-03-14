@@ -16,7 +16,7 @@ class App extends Component {
 		};
 	}
 	componentDidMount() {
-		const url = `https://localhost:8001/getApod?api_key=${
+		const url = `https://api.nasa.gov/planetary/apod?api_key=${
 			process.env.REACT_APP_NASA_APOD_KEY
 		}&date=${this.state.currentDate.format('YYYY-MM-DD')}`;
 

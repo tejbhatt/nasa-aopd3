@@ -9,6 +9,6 @@
     "APOD": {
         "METHOD": "GET",
         "URL": "https://api.nasa.gov/planetary/apod",
-        "api_key": ""
+        "api_key": "H5LixOnSDZ8ZHOVRjVuBOcRaL96D0RiwkxIPbjbb"
     }
 }
